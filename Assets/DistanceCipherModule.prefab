@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 114391502564295710}
   - component: {fileID: 114758166130074818}
   - component: {fileID: 114952048458050718}
+  - component: {fileID: 114301190651375224}
   m_Layer: 0
   m_Name: DistanceCipherModule
   m_TagString: Untagged
@@ -6404,6 +6405,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShaderNames:
   - KT/Mobile/DiffuseTint
+--- !u!114 &114301190651375224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1208141356005524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bb1d5bcbdfc1b4489f0a43500edbec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TwitchHelpMessage: '''!{0} <[TLR]><[TLR]><[TLR]>'' to press the three buttons needed
+    to input a letter. ''!{0} S'' to press the submit button. All commands are chainable
+    using spaces.'
+  TwitchManualCode: 
+  TwitchAbandonModule: []
 --- !u!114 &114306591559226396
 MonoBehaviour:
   m_ObjectHideFlags: 1

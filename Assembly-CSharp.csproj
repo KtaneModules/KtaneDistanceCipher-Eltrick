@@ -51,7 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\DistanceCipherScript.cs" />
      <Compile Include="Assets\Examples\1.1 Module\ExampleModule.cs" />
      <Compile Include="Assets\Examples\1.10 NeedyModule\ExampleNeedyModule.cs" />
      <Compile Include="Assets\Examples\1.12 Holdable\BombCreatorExample.cs" />
@@ -61,6 +60,9 @@
      <Compile Include="Assets\Examples\1.5 WebService\ExampleWebService.cs" />
      <Compile Include="Assets\Examples\1.8 Button Masher Module\ButtonMasherModule.cs" />
      <Compile Include="Assets\Examples\1.9 Widget\ExampleWidget.cs" />
+     <Compile Include="Assets\ModuleScripts\DistanceCipherScript.cs" />
+     <Compile Include="Assets\ModuleScripts\DistanceCipherTP.cs" />
+     <Compile Include="Assets\ModuleScripts\WordList.cs" />
      <Compile Include="Assets\Scripts\Easing.cs" />
      <Compile Include="Assets\Scripts\GeneralExtensions.cs" />
      <Compile Include="Assets\Scripts\KMBombInfoExtensions.cs" />
@@ -92,7 +94,6 @@
      <Compile Include="Assets\TestHarness\Widgets\SerialNumber.cs" />
      <Compile Include="Assets\TestHarness\Widgets\TwoFactorWidget.cs" />
      <Compile Include="Assets\TestHarness\Widgets\Widget.cs" />
-     <Compile Include="Assets\WordList.cs" />
      <None Include="Assets\Examples\Assets\Shaders\KT_3D_Text-Diffuse.shader" />
      <None Include="Assets\Examples\Assets\Shaders\BlendTwoTexturesUnlit.shader" />
      <None Include="Assets\Examples\Assets\Shaders\BlendTwoTexturesLitAndUnlitVertexColor.shader" />
