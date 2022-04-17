@@ -24,7 +24,7 @@ public class DistanceCipherScript : ModuleScript
 	[SerializeField]
 	private AudioClip[] _Sounds;
 
-	private char[] _alphabet = { '#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+	internal char[] _alphabet = { '#', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
 	private char _keyLetter;
 	private byte _keyDigit;
 
@@ -428,7 +428,8 @@ public class DistanceCipherScript : ModuleScript
 					_isInInputMode = false;
 					_DisplayTexts[0].text = _encryptedWord;
 					_DisplayTexts[1].text = _keyword;
-                }
+					_DisplayTexts[2].text = _keyLetter + _keyDigit.ToString();
+				}
 				else
 					_DisplayTexts[0].text += _alphabet[x - 12];
             }

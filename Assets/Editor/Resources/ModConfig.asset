@@ -15,6 +15,6 @@ MonoBehaviour:
   title: Distance Cipher
   author: Eltrick
   description: Another cipher module, how more boring could it get?
-  version: 0.1.615.9999
+  version: 0.1.616.9999
   outputFolder: build
   previewImage: {fileID: 2800000, guid: 8694309382465b043ad4deed81534a59, type: 3}

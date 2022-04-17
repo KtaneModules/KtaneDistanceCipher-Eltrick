@@ -12,13 +12,42 @@ public class DistanceCipherTP : TPScript<DistanceCipherScript>
 
     public override IEnumerator ForceSolve()
     {
-        Module._isInInputMode = true;
-        Module._DisplayTexts[0].text = Module._decryptedWord;
-        Module._DisplayTexts[1].text = "";
-        Module._DisplayTexts[2].text = "";
-        yield return new WaitForSeconds(.2f);
-        yield return null;
-        Module._SubmitButton.OnInteract();
+        string[] combos = { "LLL", "LLT", "LLR", "LRL", "LRR", "LRT", "LTR", "LTL", "LTT", "TLL", "TLR", "TLT", "TTL", "TTT", "TTR", "TRT", "TRL", "TRR", "RTT", "RTR", "RTL", "RLT", "RLL", "RLR", "RRL", "RRT", "RRR" };
+        if (Module._isInInputMode)
+        {
+            string input = Module._DisplayTexts[0].text;
+            if (input.Length > Module._decryptedWord.Length)
+            {
+                for (int k = 0; k < input.Length - Module._decryptedWord.Length; k++)
+                    yield return Process(combos[0]);
+                input = Module._DisplayTexts[0].text;
+            }
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] != Module._decryptedWord[i])
+                {
+                    for (int k = 0; k < input.Length - i; k++)
+                        yield return Process(combos[0]);
+                    break;
+                }
+            }
+        }
+        string ans = Module._decryptedWord;
+        int start = Module._DisplayTexts[0].text.Length;
+        if (!Module._isInInputMode)
+            start = 0;
+        for (int i = start; i < ans.Length; i++)
+        {
+            for (int j = 1; j < combos.Length; j++)
+            {
+                if (Module._alphabet[j] == ans[i])
+                {
+                    yield return Process(combos[j]);
+                    break;
+                }
+            }
+        }
+        yield return Process("S");
     }
 
     public override IEnumerator Process(string command)
@@ -189,7 +218,7 @@ public class DistanceCipherTP : TPScript<DistanceCipherScript>
         {
             yield return null;
             button.OnInteract();
-            yield return new WaitForSeconds(.05f);
+            yield return new WaitForSeconds(.075f);
         }
     }
 }
